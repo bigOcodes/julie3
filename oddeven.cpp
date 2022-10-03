@@ -32,3 +32,11 @@ int checkOdd(int n){
   }
   return flag;
 }
+
+    def cleanImage(self, image):
+        for i in range(image.shape[0]):
+            for j in range(image.shape[1]):
+                pixel = image[i][j]
+                if sum(pixel)<=55:
+                    image[i][j] = [0, 0, 0]
+        return image
